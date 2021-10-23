@@ -1,7 +1,7 @@
 
-import * as THREE from "https://threejs.org/build/three.module.js";
+import * as THREE from 'three';
 
-import { GLTFLoader } from "https://threejs.org/examples/jsm/loaders/GLTFLoader.js";
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 class Main {
 
@@ -64,13 +64,13 @@ class Main {
 			clock = new THREE.Clock();
 
 
-			let textureNinja = textureLoader.load("./ninja/ninja.png");
+			let textureNinja = textureLoader.load("./models/ninja.png");
 			textureNinja.encoding = THREE.sRGBEncoding;
 
 
 
 			const loader = new GLTFLoader()
-			loader.load('ninja/ninja.glb', (gltf) => {
+			loader.load('models/ninja.glb', (gltf) => {
 				gltf.scene.scale.set(10, 10, 10);
 				gltf.scene.traverse(function (object) {
 
